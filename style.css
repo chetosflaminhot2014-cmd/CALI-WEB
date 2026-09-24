@@ -18,50 +18,89 @@ body {
 :root {
     --black: #050509;
     --black-light: #0a0a12;
+
     --blue: #146cff;
     --blue-light: #3d8bff;
+
     --red: #e11d2e;
     --red-light: #ff3344;
+
     --purple: #8b3dff;
     --purple-light: #a66cff;
+
     --white: #ffffff;
     --gray: #9999a5;
     --border: #202033;
 }
 
 
-/* =========================
+/* =====================================================
+   CONTENEDOR
+===================================================== */
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+
+/* =====================================================
    NAVBAR
-========================= */
+===================================================== */
 
 .navbar {
     position: fixed;
+
     top: 0;
     left: 0;
+
     width: 100%;
     height: 75px;
 
     display: flex;
+
     align-items: center;
     justify-content: space-between;
 
     padding: 0 7%;
 
     background: rgba(5, 5, 9, 0.96);
+
     backdrop-filter: blur(14px);
 
-    border-bottom: 1px solid rgba(20, 108, 255, 0.3);
+    border-bottom:
+        1px solid
+        rgba(20, 108, 255, 0.3);
 
     z-index: 1000;
 }
 
+.nav-container {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+}
+
 .logo {
     display: flex;
+
     align-items: center;
+
     gap: 10px;
 
     text-decoration: none;
+
     color: var(--blue);
+
+    flex-shrink: 0;
 }
 
 .logo img {
@@ -70,20 +109,26 @@ body {
 
     object-fit: contain;
 
-    filter: drop-shadow(
-        0 0 12px
-        rgba(20, 108, 255, 0.35)
-    );
+    filter:
+        drop-shadow(
+            0 0 12px
+            rgba(20, 108, 255, 0.35)
+        );
 }
 
 .logo span {
     font-size: 19px;
+
     font-weight: 900;
+
     letter-spacing: 2px;
 }
 
 .navbar nav {
     display: flex;
+
+    align-items: center;
+
     gap: 28px;
 }
 
@@ -93,6 +138,7 @@ body {
     text-decoration: none;
 
     font-size: 14px;
+
     font-weight: 600;
 
     transition: 0.3s;
@@ -103,10 +149,19 @@ body {
     color: var(--blue-light);
 }
 
+
+/* =====================================================
+   DISCORD BUTTON
+===================================================== */
+
+.discord-button,
 .discord-btn {
+    display: inline-block;
+
     text-decoration: none;
 
     color: #ffffff;
+
     background: var(--red);
 
     padding: 10px 20px;
@@ -114,13 +169,19 @@ body {
     border-radius: 6px;
 
     font-size: 14px;
+
     font-weight: bold;
 
-    border: 1px solid var(--red-light);
+    border:
+        1px solid
+        var(--red-light);
 
     transition: 0.3s;
+
+    white-space: nowrap;
 }
 
+.discord-button:hover,
 .discord-btn:hover {
     background: var(--red-light);
 
@@ -132,14 +193,15 @@ body {
 }
 
 
-/* =========================
-   HERO
-========================= */
+/* =====================================================
+   HERO PRINCIPAL
+===================================================== */
 
 .hero {
     min-height: 100vh;
 
     display: flex;
+
     align-items: center;
 
     padding: 120px 10% 80px;
@@ -176,6 +238,7 @@ body {
     color: var(--blue-light);
 
     font-size: 13px;
+
     font-weight: 800;
 
     letter-spacing: 3px;
@@ -184,7 +247,12 @@ body {
 }
 
 .hero h1 {
-    font-size: clamp(55px, 8vw, 105px);
+    font-size:
+        clamp(
+            55px,
+            8vw,
+            105px
+        );
 
     line-height: 0.95;
 
@@ -210,12 +278,13 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    IP
-========================= */
+===================================================== */
 
 .server-ip {
     display: inline-flex;
+
     align-items: center;
 
     gap: 15px;
@@ -226,7 +295,9 @@ body {
 
     background: #0b0b13;
 
-    border: 1px solid rgba(20, 108, 255, 0.4);
+    border:
+        1px solid
+        rgba(20, 108, 255, 0.4);
 
     border-radius: 7px;
 
@@ -239,6 +310,7 @@ body {
     color: #777784;
 
     font-size: 11px;
+
     font-weight: 800;
 
     letter-spacing: 1px;
@@ -264,6 +336,7 @@ body {
     color: #ffffff;
 
     font-size: 11px;
+
     font-weight: 900;
 
     cursor: pointer;
@@ -282,9 +355,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    HERO BUTTONS
-========================= */
+===================================================== */
 
 .hero-buttons {
     display: flex;
@@ -303,6 +376,7 @@ body {
     border-radius: 6px;
 
     font-size: 14px;
+
     font-weight: 800;
 
     transition: 0.3s;
@@ -325,7 +399,9 @@ body {
 }
 
 .secondary-btn {
-    border: 1px solid var(--red);
+    border:
+        1px solid
+        var(--red);
 
     color: #ffffff;
 
@@ -342,9 +418,9 @@ body {
 }
 
 
-/* =========================
-   SECTIONS
-========================= */
+/* =====================================================
+   SECCIONES
+===================================================== */
 
 .section {
     padding: 120px 8%;
@@ -368,6 +444,7 @@ body {
     color: var(--blue-light);
 
     font-size: 13px;
+
     font-weight: 800;
 
     letter-spacing: 3px;
@@ -376,7 +453,12 @@ body {
 }
 
 .section h2 {
-    font-size: clamp(38px, 5vw, 65px);
+    font-size:
+        clamp(
+            38px,
+            5vw,
+            65px
+        );
 
     line-height: 1;
 
@@ -399,9 +481,9 @@ body {
 }
 
 
-/* =========================
+/* =====================================================
    CARDS
-========================= */
+===================================================== */
 
 .cards {
     display: grid;
@@ -423,7 +505,9 @@ body {
 
     background: #0d0d15;
 
-    border: 1px solid var(--border);
+    border:
+        1px solid
+        var(--border);
 
     border-radius: 10px;
 
@@ -456,84 +540,211 @@ body {
 }
 
 
-/* =========================
-   PRICE CARDS
-========================= */
+/* =====================================================
+   PRICE CARDS GENERALES
+===================================================== */
 
 .price-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(2, minmax(0, 1fr));
 
-    gap: 20px;
+    gap: 25px;
 
-    max-width: 1100px;
+    max-width: 1050px;
 
-    margin: auto;
+    margin: 0 auto;
 }
 
 .price-card {
     position: relative;
 
-    padding: 35px 25px;
+    display: flex;
 
-    background: #0d0d15;
+    flex-direction: column;
 
-    border: 1px solid var(--border);
+    padding: 35px;
 
-    border-radius: 10px;
+    min-height: 500px;
 
-    transition: 0.3s;
+    background:
+        linear-gradient(
+            145deg,
+            #10101a,
+            #09090f
+        );
+
+    border:
+        1px solid
+        var(--border);
+
+    border-radius: 14px;
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 .price-card:hover {
-    transform: translateY(-7px);
+    transform: translateY(-8px);
 
     border-color:
         rgba(139, 61, 255, 0.7);
 
     box-shadow:
-        0 15px 40px
-        rgba(139, 61, 255, 0.08);
+        0 20px 45px
+        rgba(139, 61, 255, 0.12);
 }
 
 .price-card h3 {
     color: #ffffff;
 
-    font-size: 19px;
+    font-size: 24px;
 
-    margin-bottom: 20px;
+    font-weight: 900;
+
+    margin-bottom: 15px;
+}
+
+.price-card p {
+    color: #92929f;
+
+    font-size: 14px;
+
+    margin-bottom: 15px;
 }
 
 .price {
     color: var(--blue-light);
 
-    font-size: 35px;
+    font-size: 30px;
 
     font-weight: 900;
-
-    margin-bottom: 25px;
-}
-
-.price-card p {
-    color: #888895;
 
     margin-bottom: 20px;
 }
 
+.price-card strong {
+    color: #ffffff;
+}
+
+.price-card code {
+    padding: 3px 7px;
+
+    border-radius: 5px;
+
+    background: #141421;
+
+    color: var(--purple-light);
+
+    font-family:
+        Consolas,
+        monospace;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
+   ICONO VIP
+===================================================== */
+
+.price-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    border-radius: 12px;
+
+    background:
+        rgba(139, 61, 255, 0.12);
+
+    border:
+        1px solid
+        rgba(139, 61, 255, 0.35);
+
+    color: var(--purple-light);
+
+    font-size: 13px;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    box-shadow:
+        0 0 25px
+        rgba(139, 61, 255, 0.08);
+}
+
+
+/* =====================================================
+   BENEFICIOS
+===================================================== */
+
+.price-card ul {
+    list-style: none;
+
+    margin:
+        10px 0 30px;
+
+    padding: 0;
+}
+
+.price-card li {
+    position: relative;
+
+    padding-left: 25px;
+
+    margin-bottom: 12px;
+
+    color: #b5b5c0;
+
+    font-size: 14px;
+}
+
+.price-card li::before {
+    content: "✓";
+
+    position: absolute;
+
+    left: 0;
+
+    color: var(--blue-light);
+
+    font-weight: 900;
+}
+
+
+/* =====================================================
+   BOTÓN VIP
+===================================================== */
+
 .price-card button {
     width: 100%;
 
-    padding: 13px;
+    margin-top: auto;
 
-    border: none;
+    padding: 14px;
 
-    border-radius: 5px;
+    border:
+        1px solid
+        rgba(20, 108, 255, 0.5);
+
+    border-radius: 7px;
 
     background: var(--blue);
 
     color: #ffffff;
+
+    font-size: 13px;
 
     font-weight: 900;
 
@@ -545,49 +756,73 @@ body {
 .price-card button:hover {
     background: var(--purple);
 
-    transform: translateY(-2px);
-}
-
-.featured {
     border-color: var(--purple);
 
-    transform: scale(1.03);
+    transform: translateY(-2px);
 
     box-shadow:
-        0 0 30px
-        rgba(139, 61, 255, 0.12);
+        0 8px 25px
+        rgba(139, 61, 255, 0.2);
 }
 
-.popular {
+
+/* =====================================================
+   VIP DESTACADO
+===================================================== */
+
+.price-card.featured {
+    border-color:
+        rgba(139, 61, 255, 0.7);
+
+    box-shadow:
+        0 0 35px
+        rgba(139, 61, 255, 0.12);
+
+    transform: translateY(-8px);
+}
+
+.price-card.featured:hover {
+    transform: translateY(-14px);
+}
+
+.featured-label {
     position: absolute;
 
-    top: -12px;
+    top: -13px;
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
-    padding: 5px 14px;
-
-    background: var(--red);
-
-    color: #ffffff;
-
-    border:
-        1px solid
-        var(--red-light);
+    padding: 6px 16px;
 
     border-radius: 20px;
 
+    background: var(--purple);
+
+    border:
+        1px solid
+        var(--purple-light);
+
+    color: #ffffff;
+
     font-size: 10px;
+
     font-weight: 900;
 
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+
+    white-space: nowrap;
+
+    box-shadow:
+        0 5px 20px
+        rgba(139, 61, 255, 0.25);
 }
 
 
-/* =========================
-   VIP
-========================= */
+/* =====================================================
+   VIP SECTION
+===================================================== */
 
 .vip-section {
     background:
@@ -601,12 +836,149 @@ body {
 }
 
 
-/* =========================
-   FOOTER
-========================= */
+/* =====================================================
+   PÁGINA VIP - HERO
+===================================================== */
 
-footer {
-    padding: 50px 20px;
+.page-hero {
+    padding:
+        160px 0 90px;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 50% 20%,
+            rgba(139, 61, 255, 0.18),
+            transparent 45%
+        ),
+
+        #050509;
+}
+
+.page-hero .section-tag {
+    display: inline-block;
+
+    color: var(--purple-light);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 18px;
+}
+
+.page-hero h1 {
+    font-size:
+        clamp(
+            45px,
+            7vw,
+            80px
+        );
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+}
+
+.page-hero h1 span {
+    color: var(--purple-light);
+}
+
+.page-hero p {
+    max-width: 650px;
+
+    margin: 0 auto;
+
+    color: var(--gray);
+
+    font-size: 17px;
+}
+
+
+/* =====================================================
+   TIENDA VIP
+===================================================== */
+
+.shop-section {
+    padding:
+        100px 0 120px;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(20, 108, 255, 0.08),
+            transparent 40%
+        ),
+
+        #09090f;
+}
+
+.section-header {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin:
+        0 auto 60px;
+}
+
+.section-header .section-tag {
+    display: block;
+
+    color: var(--blue-light);
+
+    font-size: 12px;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.section-header h2 {
+    font-size:
+        clamp(
+            35px,
+            5vw,
+            60px
+        );
+
+    line-height: 1;
+
+    font-weight: 900;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+.section-header h2 span {
+    color: var(--blue-light);
+}
+
+.section-header p {
+    color: var(--gray);
+
+    font-size: 16px;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer,
+.footer {
+    padding:
+        50px 20px;
 
     text-align: center;
 
@@ -615,6 +987,64 @@ footer {
     border-top:
         1px solid
         rgba(20, 108, 255, 0.2);
+}
+
+.footer-content {
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 50px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding:
+        0 25px 40px;
+
+    text-align: left;
+}
+
+.footer-content h3 {
+    color: var(--blue-light);
+
+    letter-spacing: 2px;
+
+    margin-bottom: 12px;
+}
+
+.footer-content h4 {
+    color: #ffffff;
+
+    margin-bottom: 15px;
+}
+
+.footer-content p {
+    color: #666674;
+
+    font-size: 13px;
+}
+
+.footer-content a {
+    display: block;
+
+    width: fit-content;
+
+    margin-bottom: 10px;
+
+    color: #777784;
+
+    text-decoration: none;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.footer-content a:hover {
+    color: var(--blue-light);
 }
 
 .footer-logo {
@@ -656,28 +1086,68 @@ footer p {
     font-weight: bold;
 }
 
+.footer-bottom {
+    padding-top: 20px;
 
-/* =========================
+    border-top:
+        1px solid
+        rgba(255, 255, 255, 0.05);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    color: #555561;
+
+    font-size: 12px;
+}
+
+
+/* =====================================================
    RESPONSIVE
-========================= */
+===================================================== */
 
-@media (max-width: 900px) {
+@media (max-width: 1000px) {
 
     .navbar {
-        padding: 0 4%;
+        padding:
+            0 4%;
     }
+
+    .navbar nav {
+        gap: 15px;
+    }
+
+    .price-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+}
+
+
+@media (max-width: 900px) {
 
     .navbar nav {
         display: none;
     }
 
-    .cards,
-    .price-grid {
-        grid-template-columns: 1fr;
+    .cards {
+        grid-template-columns:
+            1fr;
     }
 
-    .featured {
+    .price-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .price-card.featured {
         transform: none;
+    }
+
+    .price-card.featured:hover {
+        transform:
+            translateY(-8px);
     }
 
     .hero {
@@ -688,13 +1158,33 @@ footer p {
     .server-ip {
         flex-wrap: wrap;
     }
+
+    .footer-content {
+        grid-template-columns:
+            1fr;
+
+        gap: 30px;
+
+        text-align: center;
+    }
+
+    .footer-content a {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
 
 
 @media (max-width: 500px) {
 
+    .navbar {
+        height: 68px;
+    }
+
     .logo span {
-        font-size: 15px;
+        font-size: 14px;
+
+        letter-spacing: 1px;
     }
 
     .logo img {
@@ -702,15 +1192,67 @@ footer p {
         height: 42px;
     }
 
+    .discord-button,
+    .discord-btn {
+        padding:
+            8px 12px;
+
+        font-size: 12px;
+    }
+
     .hero h1 {
         font-size: 55px;
     }
 
     .section {
-        padding: 90px 6%;
+        padding:
+            90px 6%;
     }
 
     .server-ip {
         width: 100%;
+    }
+
+    .container {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+    .page-hero {
+        padding:
+            130px 0 70px;
+    }
+
+    .page-hero h1 {
+        font-size: 45px;
+    }
+
+    .shop-section {
+        padding:
+            70px 0 90px;
+    }
+
+    .section-header {
+        margin-bottom: 45px;
+    }
+
+    .price-card {
+        padding:
+            28px 22px;
+
+        min-height: 480px;
+    }
+
+    .price-card h3 {
+        font-size: 22px;
+    }
+
+    .price-card .price {
+        font-size: 28px;
+    }
+
+    .footer-content {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 }
